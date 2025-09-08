@@ -3,73 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Technologies Assignment</title>
-    <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Use Inter font from a reliable CDN -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>CSS Animations & JavaScript Integration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 font-sans text-gray-800 antialiased p-8">
-
-    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8 space-y-12">
-
-        <!-- Header Section -->
-        <header class="text-center">
-            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Web Technologies Showcase</h1>
-            <p class="text-lg text-gray-500">Bringing pages to life with CSS &amp; JavaScript</p>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Animations & JavaScript Integration</h1>
+            <p>Demonstrating CSS transitions, animations, and JavaScript functionality</p>
         </header>
 
-        <!-- Part 1: CSS3 Transitions and Animations -->
-        <section class="border-b pb-8">
-            <h2 class="text-2xl font-bold text-gray-700 mb-4">Part 1: CSS Transitions &amp; Animations</h2>
-            <p class="text-gray-600 mb-6">
-                This button and box demonstrate pure CSS effects. Hover over the button to see a smooth transition. The smaller box has a continuous animation.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button id="hover-btn" class="btn-transition">
-                    Hover Over Me
-                </button>
-                <div class="continuous-pulse">
-                    Pulse
+        <section id="part1">
+            <h2>Part 1: CSS3 Transitions and Animations</h2>
+            
+            <div class="demo-container">
+                <h3>Transitions</h3>
+                <div class="transition-box">Hover Me</div>
+                <div class="transition-box color-transition">Color Change</div>
+                
+                <h3>Animations</h3>
+                <div class="animation-box bounce">Bounce</div>
+                <div class="animation-box pulse">Pulse</div>
+            </div>
+        </section>
+
+        <section id="part2">
+            <h2>Part 2: JavaScript Functions</h2>
+            <div class="demo-container">
+                <div class="input-group">
+                    <input type="number" id="num1" placeholder="Enter first number">
+                    <input type="number" id="num2" placeholder="Enter second number">
+                    <button id="calculate">Calculate Sum</button>
+                </div>
+                <div class="result" id="sumResult"></div>
+                
+                <div class="scope-demo">
+                    <button id="scopeDemo">Scope Demonstration</button>
+                    <div class="result" id="scopeResult"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Part 2: JavaScript Functions -->
-        <section class="border-b pb-8">
-            <h2 class="text-2xl font-bold text-gray-700 mb-4">Part 2: JavaScript Functions</h2>
-            <p class="text-gray-600 mb-6">
-                The functions in this section show how to use parameters, return values, and understand scope. The button below uses a function to calculate a value.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <button id="calc-btn" class="btn-transition">
-                    Calculate Area
-                </button>
-                <p id="result-text" class="text-gray-700 text-lg font-medium">Result: <span class="font-normal text-gray-500">Click to calculate</span></p>
-            </div>
-        </section>
-
-        <!-- Part 3: Combining CSS and JS -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-700 mb-4">Part 3: JS + CSS Integration</h2>
-            <p class="text-gray-600 mb-6">
-                This button uses JavaScript to add a class to the box below, which then triggers a CSS slide-in animation.
-            </p>
-            <div class="flex flex-col items-center space-y-6">
-                <button id="trigger-anim-btn" class="btn-transition">
-                    Trigger Animation
-                </button>
-                <div id="animated-box" class="animated-box">
-                    <p class="text-gray-700 font-medium text-center">I am a box animated by JavaScript!</p>
+        <section id="part3">
+            <h2>Part 3: Combining CSS Animations with JavaScript</h2>
+            <div class="demo-container">
+                <div class="controls">
+                    <button id="startAnimation">Start Animation</button>
+                    <button id="stopAnimation">Stop Animation</button>
+                    <button id="changeColor">Change Color</button>
+                </div>
+                
+                <div class="animation-target" id="animatedElement">
+                    Interactive Element
+                </div>
+                
+                <div class="card-container">
+                    <div class="card" id="flipCard">
+                        <div class="card-front">Front</div>
+                        <div class="card-back">Back</div>
+                    </div>
+                    <button id="flipCardBtn">Flip Card</button>
                 </div>
             </div>
         </section>
-
     </div>
 
-    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
